@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 5.3//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-5.3.dtd">
+
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!--        // Connection Properties-->
+        <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <property name="connection.driver.class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost/student_manage</property>
+        <property name="connection.user">root</property>
+        <property name="connection.password">Ankita@221715</property>
+        <!--        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>-->
+        <!--        // Hibernate Properties-->
+        <property name="hbm2ddl.auto">create</property>
+        <!--        <property name="show.formate_sql">true</property>-->
+        <property name="show_sql">true</property>
+        <mapping class = "com.map.Question1"/>
+        <mapping class = "com.map.Answer1"/>
+
+
+        <!--        //transaction-->
+        <!--                <property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>-->
+        <!--        <property name="hibernate.transaction.coordinator_class">org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl</property>-->
+        <!--        <mapping resource="Student.hbm.xml"></mapping>-->
+        <!--<mapping class = "ankit.com.newStudent"/>-->
+    </session-factory>
+</hibernate-configuration>
+
